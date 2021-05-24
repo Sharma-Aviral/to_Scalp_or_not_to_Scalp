@@ -1,4 +1,4 @@
 from selenium import webdriver
 
 browser = webdriver.Firefox()
-browser.get('http://seleniumhq.org/')
+browser.get('https://rptechindia.in/nvidia-geforce-rtx-3060-ti.html')

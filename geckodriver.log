@@ -1,0 +1,13 @@
+1621852749095	geckodriver	INFO	Listening on 127.0.0.1:56515
+1621852752126	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Avral\\AppData\\Local\\Temp\\rust_mozprofileDiWdl3"
+1621852752526	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621852754364	Marionette	INFO	Listening on port 56526
+1621852754789	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///actors/ClickHandlerChild.jsm, line 40: TypeError: composedTarget is null
+1621852820380	geckodriver	INFO	Listening on 127.0.0.1:56684
+1621852823428	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Avral\\AppData\\Local\\Temp\\rust_mozprofiled13FsX"
+1621852823961	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621852825582	Marionette	INFO	Listening on port 56692
+1621852826087	Marionette	WARN	TLS certificate errors will be ignored for this session
