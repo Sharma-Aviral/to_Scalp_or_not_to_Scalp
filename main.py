@@ -1,22 +1,23 @@
 from logging import log
+import time
 from os import name
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.select import Select
 from dotenv import load_dotenv
 
 browser = webdriver.Firefox()
-browser.get('https://www.flipkart.com/sony-chu-2208bb01i-1000-gb-spider-man-ratchet-clank-gran-turismo/p/itm8230ffd9a827b?pid=GMCFUAKAMHX6QJ2C&lid=LSTGMCFUAKAMHX6QJ2C1HTDLX&marketplace=FLIPKART&q=ps4&store=4rr&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=ce6379e2-5ac3-4f4a-a336-1d1bce1256fb.GMCFUAKAMHX6QJ2C.SEARCH&ppt=browse&ppn=browse&ssid=toxzlozlu5xmtslc1622043007335&qH=0e740342f31e9aa6') 
+browser.get('https://www.flipkart.com/noise/p/itm0d83240694f33?pid=9780008309008&lid=LSTBOK9780008309008IEUPVV&marketplace=FLIPKART&store=bks&srno=b_1_1&otracker=browse&fm=organic&iid=265bf789-6744-4485-b098-51ae02ee1b37.9780008309008.SEARCH&ppt=None&ppn=None&ssid=qn0oevfzr40000001622097919257') 
 notCLickable = True
 
 loginDetails = {
-    "mobile_No" : ,
+    "mobile_No" :,
     "password": ""
 }
 
-address = {
-      
 
-
-}
 print(loginDetails["mobile_No"])
 
 def login():
@@ -30,34 +31,35 @@ def login():
     userName.send_keys(loginDetails["mobile_No"])
     pressLogin = browser.find_element_by_class_name("_2KpZ6l._2HKlqd._3AWRsL")
     pressLogin.click()
+    time.sleep(1.24)
 
-login()
+
 
 def addressing():
-    radioButton = browser.find_element_by_class_name("_3DAmyP")
-    radioButton.click()
-    nameBar = browser.find_element_by_name("name")
-    phoneNumber = browser.find_element_by_name("phone")
-    address = browser.find_element_by_class_name("_1sQQBU._1w3ZZo._1TO48q")
-    pincode = browser.find_element_by_name("pincode")
-    locality = browser.find_element_by_name("addressLine2")
-    saveAddbutton = browser.find_element_by_class_name("_2KpZ6l._1JDhFS._3AWRsL")
-    nameBar.send_keys()
-    phoneNumber.send_keys()
-    address.send_keys("")
-    pincode.send_keys("226016")    
-
-
+  
+    time.sleep(0.5)
+    contiButtons = browser.find_element_by_class_name("_2KpZ6l._1seccl._3AWRsL")
+    # nameBar.send_keys("aviral.sharma.012@gmail.com")
+    time.sleep(1)
+    contiButtons.click()
+    time.sleep(5)
+    # upiRadioo = WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "_1XFPmK")))
+    upiRadioo = browser.find_element_by_id("UPI_COLLECT")
+    upiRadioo.click()
+    time.sleep(1)
+    
 while notCLickable :
     
-      
     try:
+        login()
         element = browser.find_element_by_class_name("_2KpZ6l._2U9uOA.ihZ75k._3AWRsL")
         element.click()
+        notCLickable = False
         print("added _to_cart")
+    except:  
        
-    except:
-        print("Refreshing")    
+        print("not in cart")
+        browser.refresh()
      
  
-
+addressing()
